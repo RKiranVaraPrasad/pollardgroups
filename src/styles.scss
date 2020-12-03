@@ -2,6 +2,16 @@ body{
     margin: 0;
 }
 
+.cards-wrapper{
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+
+
 //remove bootstrap styles
 .navbar{
     padding: 0;
@@ -15,4 +25,8 @@ body{
 }
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link{
     color: rgba(233, 1, 1, 1);
+}
+.navbar-expand-lg .navbar-nav .nav-link{
+    padding-right: 1rem;
+    padding-left: 1rem;
 }
