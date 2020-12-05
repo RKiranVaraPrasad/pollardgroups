@@ -1,6 +1,10 @@
 body{
     margin: 0;
 }
+h1,
+h2{
+    margin: 0;
+}
 
 .cards-wrapper{
     position: absolute;
@@ -8,9 +12,35 @@ body{
     bottom: 50px;
     transform: translateX(-50%);
     width: 100%;
+    z-index: 99999;
 }
-
-
+section.banner{
+    position: relative;
+    h2{ 
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #fcff43;
+        width: 100%;
+        padding: 7px 40px;
+        text-align: center;
+        background-color: rgb(0 0 0 / 53%);
+    }
+}
+.side-image{
+    width: 400px;
+    overflow: hidden;
+    height: 350px;
+    position: relative;
+    img {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        max-width: 500px;
+    }
+}
 
 //remove bootstrap styles
 .navbar{
@@ -30,3 +60,50 @@ body{
     padding-right: 1rem;
     padding-left: 1rem;
 }
+.btn-primary, .btn-primary:hover, .btn-primary.focus, .btn-primary:focus {
+    background-color: #eb0103;
+    border-color: #eb0103;
+    box-shadow: none;
+}
+.btn{
+    border-radius: 0;
+}
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: none;
+}
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle{
+    background-color: #eb0103;
+    border-color: #eb0103;
+}
+.card-title {
+    color: #eb0103;    
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.text-muted{
+    font-weight: 400;
+}
+.carousel-inner {
+    height: 560px;
+}
+.card{
+    background-color: rgb(255 255 255 / 0.96);
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        margin-bottom: 14px;
+        li{
+            padding-left: 24px;
+            background: url(./assets/icons/list.svg) left center no-repeat;
+            background-size: 15px;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .cards-wrapper{
+        position: static;
+        transform: translateX(0%);
+    }
+  }
